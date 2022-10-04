@@ -1,9 +1,10 @@
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Project carried out in the course
+### React - The Complete Guide (incl Hooks, React Router, Redux), carried out on Udemy
 
 ## Available Scripts
+`npm install`
+#### In the project directory, you can run:
 
-In the project directory, you can run:
+#### `npm run dev`
 
-### `npm start`
+Use http://localhost:3000/ to access the app
