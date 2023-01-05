@@ -1,8 +1,9 @@
 import Expenses from "./components/Expenses/Expenses";
 import NewExpense from "./components/NewExpense/NewExpense";
+import { useState, useEffect } from "react";
 
 function App() {
-  const expenses = [
+  const [expenses, setExpenses] = useState([
     {
       id: "e1",
       title: "Toilet Paper",
@@ -11,21 +12,26 @@ function App() {
     },
     {
       id: "e2",
-      title: "Car Insurance",
-      amount: 294.12,
-      date: new Date(2021, 5, 28),
+      title: "Toilet Paper",
+      amount: 94.12,
+      date: new Date(2021, 5, 12),
     },
     {
       id: "e3",
-      title: "Data",
-      amount: 294.12,
-      date: new Date(2021, 5, 28),
-    },
-  ];
+      title: "Toilet Paper",
+      amount: 94.12,
+      date: new Date(2021, 5, 12),
+    }
+  ]);
+
+  const addExpenseHandler = expense => {
+    setExpenses([...expenses, expense])
+    console.log(expenses);
+  }
   return (
     <div className="App">
       <header className="App-header">
-        <NewExpense />
+        <NewExpense onAddExpenseHandler={addExpenseHandler} />
         <Expenses items={expenses} />
       </header>
     </div>
